@@ -48,19 +48,17 @@
         .border-rich-accent-dark { border-color: #E5B800; }
         .shadow-rich-accent-light { box-shadow: 0 10px 15px -3px rgba(255, 204, 0, 0.3), 0 4px 6px -2px rgba(255, 204, 0, 0.15); }
 
-        /* Specific style for the Shaka iLembe image container to manage portrait aspect ratio */
+        /* Shaka iLembe image container: Removed fixed height, image will size naturally within column width */
         .shaka-ilembe-thumbnail-container {
-            height: 250px; /* Fixed height for consistent layout */
-            display: flex; /* Use flexbox for centering */
-            align-items: center; /* Center vertically */
-            justify-content: center; /* Center horizontally */
-            overflow: hidden; /* Hide parts that exceed the height */
+            /* Removed height, display flex, align-items, justify-content */
+            overflow: hidden; /* Still useful to prevent overflow if image is too large */
             background-color: #3C3C5A; /* Placeholder background */
+            border-radius: 0.5rem; /* Match other elements */
         }
         .shaka-ilembe-thumbnail-container img {
-            width: auto; /* Allow image to determine its width */
-            height: 100%; /* Make image fill the height */
-            object-fit: contain; /* Ensure the whole image is visible without cropping */
+            width: 100%; /* Image will fill the width of its parent container */
+            height: auto; /* Allow height to adjust naturally based on aspect ratio */
+            object-fit: cover; /* Cover the container, cropping if necessary (less likely with width:100% and auto height) */
         }
     </style>
 </head>
@@ -182,7 +180,7 @@
     <!-- 2. Sync & Scoring Section --><section id="sync" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-[#3C3C5A]">
         <!-- Ampersand fixed --><h2 class="text-4xl font-bold text-center mb-12 text-rich-accent">Film Scoring & Sync Placements</h2>
 
-        <div class="grid lg:grid-cols-2 gap-10">
+        <!-- Sync Video Grid (Now 3 Columns) --><div class="grid lg:grid-cols-3 gap-10">
             <!-- Project 1: OMFilms Series --><div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A]">
                 <h3 class="text-2xl font-semibold mb-3">OMFilms Short Series Score</h3>
                 <p class="text-gray-400 mb-4">Original music for the popular online series, \#MomentsToMeltInto (6 episodes). Over 300K views on YouTube.</p>
@@ -197,7 +195,21 @@
                 </div>
             </div>
 
-            <!-- Project 2: Shaka iLembe Placement (Thumbnail updated) --><div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] flex flex-col justify-between">
+            <!-- Project 2: Steers TVC (NEW ADDITION) --><div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A]">
+                <h3 class="text-2xl font-semibold mb-3">Steers TVC - YA'VAYA</h3>
+                <p class="text-gray-400 mb-4">Original composition and sound design for the national Steers 'YA'VAYA' television commercial.</p>
+                <div class="video-container">
+                    <!-- YouTube Embed: Steers YA'VAYA --><iframe 
+                        src="https://www.youtube.com/embed/XaHrOln6iI0" 
+                        title="Steers YA'VAYA TVC" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Project 3: Shaka iLembe Placement (Thumbnail at full resolution) --><div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] flex flex-col justify-between">
                  <!-- Thumbnail addition for Portrait Image --><div class="mb-4 rounded-lg overflow-hidden border border-rich-accent/50 shaka-ilembe-thumbnail-container">
                     <img 
                         src="https://raw.githubusercontent.com/thabomoagi/music-portfolio/main/ilembe1.jpg" 
@@ -213,6 +225,15 @@
                     </a>
                 </div>
             </div>
+        </div>
+        
+        <!-- Major Placements & Media Licensing (NEW SECTION) -->
+        <h3 class="text-3xl font-bold text-center mt-16 mb-6 text-rich-accent/80">Major Placements & Media Licensing</h3>
+        <div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] max-w-4xl mx-auto">
+            <ul class="list-disc list-inside space-y-3 text-lg text-gray-300 text-left">
+                <li class="pl-2 flex items-start"><i data-lucide="monitor" class="w-5 h-5 mr-3 text-rich-accent"></i>Music officially licensed for the **Netflix Original Series 'Blood & Water'**.</li>
+                <li class="pl-2 flex items-start"><i data-lucide="tv" class="w-5 h-5 mr-3 text-rich-accent"></i>Composition and sound design used in **Shoprite, Rosebank College and many other TV Commercials**.</li>
+            </ul>
         </div>
     </section>
 
@@ -233,7 +254,7 @@
                 <i data-lucide="trending-up" class="w-8 h-8 text-rich-accent mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2 text-white">Black Major Feature: Amapiano Hit 'Chale'</h3>
                 <p class="text-gray-400 mb-4 text-sm flex-grow">Industry coverage detailing the YouTube trending status and success of the Amapiano track, highlighting market performance.</p>
-                <a href="https://blackmajor.co.co/news/sho-madjozis-chale-trends-on-youtube/" target="_blank" class="text-rich-accent hover:text-rich-accent-dark font-medium flex items-center mt-2">
+                <a href="https://blackmajor.co.za/news/sho-madjozis-chale-trends-on-youtube/" target="_blank" class="text-rich-accent hover:text-rich-accent-dark font-medium flex items-center mt-2">
                     Read Article <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
                 </a>
             </div>
