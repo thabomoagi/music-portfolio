@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thabo Moagi | Award-Winning Producer & Engineer Showreel</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Lucide Icons -->
-    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons --><script type="module" src="https://unpkg.com/lucide@latest"></script>
     <style>
         /* Custom styles for the deep, rich theme and font */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -49,12 +47,26 @@
         .hover\:bg-rich-accent-dark:hover { background-color: #E5B800; }
         .border-rich-accent-dark { border-color: #E5B800; }
         .shadow-rich-accent-light { box-shadow: 0 10px 15px -3px rgba(255, 204, 0, 0.3), 0 4px 6px -2px rgba(255, 204, 0, 0.15); }
+
+        /* Specific style for the Shaka iLembe image container to manage portrait aspect ratio */
+        .shaka-ilembe-thumbnail-container {
+            height: 250px; /* Fixed height for consistent layout */
+            display: flex; /* Use flexbox for centering */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            overflow: hidden; /* Hide parts that exceed the height */
+            background-color: #3C3C5A; /* Placeholder background */
+        }
+        .shaka-ilembe-thumbnail-container img {
+            width: auto; /* Allow image to determine its width */
+            height: 100%; /* Make image fill the height */
+            object-fit: contain; /* Ensure the whole image is visible without cropping */
+        }
     </style>
 </head>
 <body class="min-h-screen">
 
-    <!-- Header & Navigation -->
-    <header class="bg-[#1A1A2E] shadow-xl sticky top-0 z-50">
+    <!-- Header & Navigation --><header class="bg-[#1A1A2E] shadow-xl sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-rich-accent">THABO MOAGI</h1>
             <nav class="hidden md:flex space-x-6">
@@ -63,29 +75,24 @@
                 <a href="#writing" class="text-gray-300 hover:text-rich-accent transition duration-300">Writing</a>
                 <a href="#contact" class="text-gray-300 hover:text-rich-accent transition duration-300">Contact</a>
             </nav>
-            <!-- Mobile Menu Placeholder -->
-            <div class="md:hidden">
+            <!-- Mobile Menu Placeholder --><div class="md:hidden">
                 <i data-lucide="menu" class="w-6 h-6 text-rich-accent"></i>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    <!-- Hero Section --><section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <div class="bg-[#252538] p-8 md:p-12 rounded-xl shadow-2xl border border-rich-accent/50 flex flex-col items-center">
             
-            <!-- Professional Picture (UPDATED) -->
-            <div class="mb-6">
+            <!-- Professional Picture (UPDATED) --><div class="mb-6">
                 <img 
-                    src="https://raw.githubusercontent.com/Tboydaflame/showreel/main/Thabo%20Moagi%20pic%20(1).jpg" 
+                    src="https://raw.githubusercontent.com/thabomoagi/music-portfolio/main/thaboprof.jpg" 
                     alt="Thabo Moagi Professional Headshot" 
                     class="rounded-full w-36 h-36 object-cover border-4 border-rich-accent shadow-lg"
                     onerror="this.onerror=null;this.src='https://placehold.co/150x150/FFCC00/151525?text=THABO'"
                 >
             </div>
-            <!-- Old instruction paragraph removed -->
-
-            <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-4">
+            <!-- Old instruction paragraph removed --><h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-4">
                 Award-Winning <span class="text-rich-accent">Audio Architect</span>
             </h2>
             <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-8">
@@ -102,18 +109,15 @@
         </div>
     </section>
 
-    <!-- 1. Hit Singles Showcase Section -->
-    <section id="showreel" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- 1. Hit Singles Showcase Section --><section id="showreel" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 class="text-4xl font-bold text-center mb-12 text-rich-accent">Chart-Topping Production</h2>
 
         <div class="grid md:grid-cols-2 gap-10">
-            <!-- Project 1: Sho Madjozi - John Cena -->
-            <div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] hover:border-rich-accent transition duration-300">
+            <!-- Project 1: Sho Madjozi - John Cena --><div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] hover:border-rich-accent transition duration-300">
                 <h3 class="text-2xl font-semibold mb-3">Sho Madjozi - John Cena</h3>
                 <p class="text-gray-400 mb-4">Official Producer/Engineer. Contributed to BET and SAMA Award wins. Over 29 Million Views.</p>
                 <div class="video-container">
-                    <!-- YouTube Embed: Sho Madjozi John Cena -->
-                    <iframe 
+                    <!-- YouTube Embed: Sho Madjozi John Cena --><iframe 
                         src="https://www.youtube.com/embed/H9bGITkIHmM" 
                         title="Sho Madjozi - John Cena Official Music Video" 
                         frameborder="0" 
@@ -123,13 +127,11 @@
                 </div>
             </div>
 
-            <!-- Project 2: Rexxie, Wizkid - Abracadabra -->
-            <div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] hover:border-rich-accent transition duration-300">
+            <!-- Project 2: Rexxie, Wizkid - Abracadabra --><div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] hover:border-rich-accent transition duration-300">
                 <h3 class="text-2xl font-semibold mb-3">Rexxie ft. Wizkid - Abracadabra</h3>
                 <p class="text-gray-400 mb-4">Producer/Engineer on the \#1 single in Nigeria. Over 28 Million Views and AFRIMA Nomination.</p>
                 <div class="video-container">
-                    <!-- YouTube Embed: Rexxie, Wizkid Abracadabra -->
-                    <iframe 
+                    <!-- YouTube Embed: Rexxie, Wizkid Abracadabra --><iframe 
                         src="https://www.youtube.com/embed/c3fkbGQHoRM" 
                         title="Rexxie - Abracadabra (Official Video) ft. Wizkid" 
                         frameborder="0" 
@@ -143,8 +145,7 @@
         <h3 class="text-3xl font-bold text-center mt-16 mb-8 text-rich-accent/80">Genre Mastery & Top Collaborations</h3>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- Marioo Mama Amina (YouTube) -->
-            <a href="https://youtu.be/vJXB8kqKMOk" target="_blank" class="bg-[#252538] p-4 rounded-lg flex items-center justify-between hover:bg-[#3C3C5A] transition duration-300 shadow-md">
+            <!-- Marioo Mama Amina (YouTube) --><a href="https://youtu.be/vJXB8kqKMOk" target="_blank" class="bg-[#252538] p-4 rounded-lg flex items-center justify-between hover:bg-[#3C3C5A] transition duration-300 shadow-md">
                 <div>
                     <p class="font-semibold text-lg text-white">Marioo - Mama Amina</p>
                     <p class="text-sm text-gray-400">East African \#1 Hit (15M+ Views)</p>
@@ -152,51 +153,41 @@
                 <i data-lucide="youtube" class="w-6 h-6 text-red-500"></i>
             </a>
 
-            <!-- Amapiano Sample (Chale) (Spotify/Streaming) -->
-            <a href="https://open.spotify.com/track/5pzTV78BCKzkiucbB7mt5K?si=abec69a24b794a30" target="_blank" class="bg-[#252538] p-4 rounded-lg flex items-center justify-between hover:bg-[#3C3C5A] transition duration-300 shadow-md">
+            <!-- Amapiano Sample (Chale) (Spotify/Streaming) --><a href="https://open.spotify.com/track/5pzTV78BCKzkiucbB7mt5K?si=abec69a24b794a30" target="_blank" class="bg-[#252538] p-4 rounded-lg flex items-center justify-between hover:bg-[#3C3C5A] transition duration-300 shadow-md">
                 <div>
                     <p class="font-semibold text-lg text-white">Amapiano Hit 'Chale'</p>
                     <p class="text-sm text-gray-400">Deep Genre Expertise</p>
                 </div>
-                <!-- Changed to music icon for streaming/Spotify -->
-                <i data-lucide="music" class="w-6 h-6 text-green-400"></i>
+                <!-- Changed to music icon for streaming/Spotify --><i data-lucide="music" class="w-6 h-6 text-green-400"></i>
             </a>
 
-             <!-- Gqom Sample (Idhom) (YouTube) -->
-            <a href="https://youtu.be/4YSnis93Np0?si=cQJ35IPv5pPSL_XF" target="_blank" class="bg-[#252538] p-4 rounded-lg flex items-center justify-between hover:bg-[#3C3C5A] transition duration-300 shadow-md">
+             <!-- Gqom Sample (Idhom) (YouTube) --><a href="https://youtu.be/4YSnis93Np0?si=cQJ35IPv5pPSL_XF" target="_blank" class="bg-[#252538] p-4 rounded-lg flex items-center justify-between hover:bg-[#3C3C5A] transition duration-300 shadow-md">
                 <div>
                     <p class="font-semibold text-lg text-white">Gqom Showcase Track 'Idhom'</p>
                     <p class="text-sm text-gray-400">Energetic Rhythmic Production</p>
                 </div>
-                <!-- Changed to YouTube icon -->
-                <i data-lucide="youtube" class="w-6 h-6 text-red-500"></i>
+                <!-- Changed to YouTube icon --><i data-lucide="youtube" class="w-6 h-6 text-red-500"></i>
             </a>
             
-             <!-- Afrobeats Sample (No More Condition) (Spotify/Streaming) -->
-            <a href="https://open.spotify.com/track/3IuQSKeEESohwnwwgPeDCF?si=9cb18b1d2923402a" target="_blank" class="bg-[#252538] p-4 rounded-lg flex items-center justify-between hover:bg-[#3C3C5A] transition duration-300 shadow-md">
+             <!-- Afrobeats Sample (No More Condition) (Spotify/Streaming) --><a href="https://open.spotify.com/track/3IuQSKeEESohwnwwgPeDCF?si=9cb18b1d2923402a" target="_blank" class="bg-[#252538] p-4 rounded-lg flex items-center justify-between hover:bg-[#3C3C5A] transition duration-300 shadow-md">
                 <div>
                     <p class="font-semibold text-lg text-white">Afrobeats Hit 'No More Condition'</p>
                     <p class="text-sm text-gray-400">Vibrant, Global Sound</p>
                 </div>
-                <!-- Changed to music icon for streaming/Spotify -->
-                <i data-lucide="music" class="w-6 h-6 text-green-400"></i>
+                <!-- Changed to music icon for streaming/Spotify --><i data-lucide="music" class="w-6 h-6 text-green-400"></i>
             </a>
         </div>
     </section>
 
-    <!-- 2. Sync & Scoring Section -->
-    <section id="sync" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-[#3C3C5A]">
-        <!-- Ampersand fixed -->
-        <h2 class="text-4xl font-bold text-center mb-12 text-rich-accent">Film Scoring & Sync Placements</h2>
+    <!-- 2. Sync & Scoring Section --><section id="sync" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-[#3C3C5A]">
+        <!-- Ampersand fixed --><h2 class="text-4xl font-bold text-center mb-12 text-rich-accent">Film Scoring & Sync Placements</h2>
 
         <div class="grid lg:grid-cols-2 gap-10">
-            <!-- Project 1: OMFilms Series -->
-            <div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A]">
+            <!-- Project 1: OMFilms Series --><div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A]">
                 <h3 class="text-2xl font-semibold mb-3">OMFilms Short Series Score</h3>
                 <p class="text-gray-400 mb-4">Original music for the popular online series, \#MomentsToMeltInto (6 episodes). Over 300K views on YouTube.</p>
                 <div class="video-container">
-                    <!-- YouTube Embed: OMFilms series -->
-                    <iframe 
+                    <!-- YouTube Embed: OMFilms series --><iframe 
                         src="https://www.youtube.com/embed/KIU42tRdYtQ" 
                         title="OMFilms Short Series" 
                         frameborder="0" 
@@ -206,22 +197,17 @@
                 </div>
             </div>
 
-            <!-- Project 2: Shaka iLembe Placement (Thumbnail updated) -->
-            <div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] flex flex-col justify-between">
-                 <!-- Thumbnail addition for Portrait Image -->
-                <div class="mb-4 rounded-lg overflow-hidden border border-rich-accent/50">
+            <!-- Project 2: Shaka iLembe Placement (Thumbnail updated) --><div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] flex flex-col justify-between">
+                 <!-- Thumbnail addition for Portrait Image --><div class="mb-4 rounded-lg overflow-hidden border border-rich-accent/50 shaka-ilembe-thumbnail-container">
                     <img 
                         src="https://raw.githubusercontent.com/thabomoagi/music-portfolio/main/ilembe1.jpg" 
                         alt="Shaka iLembe S1 Kuyini Placement Thumbnail" 
-                        class="w-full h-auto object-cover"
                         onerror="this.onerror=null;this.src='https://placehold.co/718x1024/3C3C5A/FFFFFF?text=Shaka%20iLembe%20Thumbnail%20(Portrait)'"
                     >
                 </div>
                 <div>
-                    <!-- Updated Title -->
-                    <h3 class="text-2xl font-semibold mb-3">Sho Madjozi - 'Kuyini' (Shaka Ilembe S1)</h3>
-                    <!-- Updated Text -->
-                    <p class="text-gray-400 mb-4">Official song placement in the critically acclaimed South African historical drama series.</p>
+                    <!-- Updated Title --><h3 class="text-2xl font-semibold mb-3">Sho Madjozi - 'Kuyini' (Shaka Ilembe S1)</h3>
+                    <!-- Updated Text --><p class="text-gray-400 mb-4">Official song placement in the critically acclaimed South African historical drama series.</p>
                     <a href="https://youtu.be/LVlHD9pwUZY" target="_blank" class="text-rich-accent hover:text-rich-accent-dark font-medium flex items-center mt-4">
                         View Episode/Scene Example <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
                     </a>
@@ -230,13 +216,11 @@
         </div>
     </section>
 
-    <!-- 3. Writing Portfolio Section -->
-    <section id="writing" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-[#3C3C5A]">
+    <!-- 3. Writing Portfolio Section --><section id="writing" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-[#3C3C5A]">
         <h2 class="text-4xl font-bold text-center mb-12 text-rich-accent">Technical & Creative Writing</h2>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <!-- Article 1: Industry Feature - Gqom Hit -->
-            <div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] flex flex-col hover:border-rich-accent transition duration-300">
+            <!-- Article 1: Industry Feature - Gqom Hit --><div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] flex flex-col hover:border-rich-accent transition duration-300">
                 <i data-lucide="newspaper" class="w-8 h-8 text-rich-accent mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2 text-white">Gqom Hit Song Featured in Daily Voice</h3>
                 <p class="text-gray-400 mb-4 text-sm flex-grow">A news feature covering the release and cultural impact of the Gqom hit, demonstrating market relevance and media coverage.</p>
@@ -245,18 +229,16 @@
                 </a>
             </div>
 
-            <!-- Article 2: Hit Track Feature - Amapiano -->
-            <div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] flex flex-col hover:border-rich-accent transition duration-300">
+            <!-- Article 2: Hit Track Feature - Amapiano --><div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] flex flex-col hover:border-rich-accent transition duration-300">
                 <i data-lucide="trending-up" class="w-8 h-8 text-rich-accent mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2 text-white">Black Major Feature: Amapiano Hit 'Chale'</h3>
                 <p class="text-gray-400 mb-4 text-sm flex-grow">Industry coverage detailing the YouTube trending status and success of the Amapiano track, highlighting market performance.</p>
-                <a href="https://blackmajor.co.za/news/sho-madjozis-chale-trends-on-youtube/" target="_blank" class="text-rich-accent hover:text-rich-accent-dark font-medium flex items-center mt-2">
+                <a href="https://blackmajor.co.co/news/sho-madjozis-chale-trends-on-youtube/" target="_blank" class="text-rich-accent hover:text-rich-accent-dark font-medium flex items-center mt-2">
                     Read Article <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
                 </a>
             </div>
 
-            <!-- Article 3: Editorial Listicle - Regional Amapiano -->
-            <div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] flex flex-col hover:border-rich-accent transition duration-300">
+            <!-- Article 3: Editorial Listicle - Regional Amapiano --><div class="bg-[#252538] p-6 rounded-xl shadow-lg border border-[#3C3C5A] flex flex-col hover:border-rich-accent transition duration-300">
                 <i data-lucide="list-checks" class="w-8 h-8 text-rich-accent mb-4"></i>
                 <h3 class="text-xl font-semibold mb-2 text-white">OkayAfrica Feature: Non-SA Amapiano</h3>
                 <p class="text-gray-400 mb-4 text-sm flex-grow">A feature article highlighting the growing regional influence and market reach of Amapiano produced outside of South Africa.</p>
@@ -267,14 +249,12 @@
         </div>
     </section>
 
-    <!-- 4. Contact & Footer -->
-    <footer id="contact" class="bg-[#1A1A2E] border-t border-[#3C3C5A] mt-16 py-12">
+    <!-- 4. Contact & Footer --><footer id="contact" class="bg-[#1A1A2E] border-t border-[#3C3C5A] mt-16 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h3 class="text-3xl font-bold text-white mb-4">Let's Create Something Great.</h3>
             <p class="text-xl text-gray-400 mb-8">Available for production, engineering, sync licensing, and custom writing projects.</p>
 
-            <!-- Contact Buttons -->
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+            <!-- Contact Buttons --><div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
                 <a href="mailto:tboydaflame@gmail.com" class="bg-rich-accent hover:bg-rich-accent-dark text-black font-semibold py-3 px-6 rounded-full transition duration-300 flex items-center justify-center">
                     <i data-lucide="mail" class="w-5 h-5 mr-2"></i> tboydaflame@gmail.com
                 </a>
@@ -283,18 +263,14 @@
                 </a>
             </div>
 
-            <!-- Social Links (Updated) -->
-            <div class="flex justify-center space-x-6 text-gray-400">
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/tboydaflame" target="_blank" class="hover:text-rich-accent transition duration-300">
+            <!-- Social Links (Updated) --><div class="flex justify-center space-x-6 text-gray-400">
+                <!-- Instagram --><a href="https://www.instagram.com/tboydaflame" target="_blank" class="hover:text-rich-accent transition duration-300">
                     <i data-lucide="instagram" class="w-6 h-6"></i>
                 </a>
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/thabo-moagi-279b27152" target="_blank" class="hover:text-rich-accent transition duration-300">
+                <!-- LinkedIn --><a href="https://www.linkedin.com/in/thabo-moagi-279b27152" target="_blank" class="hover:text-rich-accent transition duration-300">
                     <i data-lucide="linkedin" class="w-6 h-6"></i>
                 </a>
-                <!-- SoundCloud (Megaphone icon is used for SoundCloud in the whole app) -->
-                <a href="https://soundcloud.com/tboydaflame" target="_blank" class="hover:text-rich-accent transition duration-300">
+                <!-- SoundCloud (Megaphone icon is used for SoundCloud in the whole app) --><a href="https://soundcloud.com/tboydaflame" target="_blank" class="hover:text-rich-accent transition duration-300">
                     <i data-lucide="megaphone" class="w-6 h-6"></i>
                 </a>
             </div>
@@ -303,8 +279,7 @@
         </div>
     </footer>
 
-    <!-- Initialize Lucide Icons -->
-    <script>
+    <!-- Initialize Lucide Icons --><script>
         document.addEventListener('DOMContentLoaded', (event) => {
             lucide.createIcons();
         });
